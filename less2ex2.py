@@ -10,7 +10,7 @@ for i in list_direct:
         list_tmp.append(i)
         list_tmp.append(tmp)
     tmp = i
-    if (j == ind) & odd:
+    if j == ind and odd:
         list_tmp.append(i)
     list_reverse.extend(list_tmp)
     list_tmp.clear()
