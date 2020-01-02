@@ -4,6 +4,7 @@ list_direct = list_str.split(',')
 list_tmp = []
 list_reverse = []
 odd = True if quant % 2 == 0 else False
+
 for ind, el in enumerate(list_direct):
     if ind % 2 == 1:
         list_tmp.append(el)
