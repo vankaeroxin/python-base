@@ -12,7 +12,7 @@ def powerrec(arg_1, arg_2):
     return arg_1 * powerrec(arg_1, arg_2 - 1)
 
 
-def powercicle(arg_1, arg_2):
+def powercycle(arg_1, arg_2):
     t = arg_1
     for i in range(abs(arg_2) - 1):
         t *= arg_1
@@ -36,7 +36,7 @@ while 1:
         print(f'\n{len(str(x)) * " "}{y}')
         print(f'{x}{len(str(y)) * " "} = {pow(x, y)}\n')
         print(f'Оператор ** : {power(x, y)}')
-        print(f'Цикл        : {powercicle(x, y)}')
+        print(f'Цикл        : {powercycle(x, y)}')
         print(f'Рекурсия    : {powerrec(x, y)}\n')
     else:
         continue
