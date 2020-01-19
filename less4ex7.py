@@ -1,3 +1,6 @@
+from time import time
+
+
 def fact_yield(n):
     """
     Функция принимает на вход целое число n и возвращает генератор для факториалов чисел от 1 до n
@@ -32,17 +35,26 @@ while 1:
 
         if n == 'q':
             break
-
         n = int(n)
-        if n > 15:
-            continue
+        # if n > 15:
+        #     continue
+
+        t = time()
 
         for i, f in enumerate(fact_yield(n), 1):
             print(f'{i}! = {f}')
 
-        print()
+        y_time = time() - t
+        t = time()
+
         for i, f in enumerate(range(1, n + 1), 1):
             print(f'{i}! = {fact_ret(f)}')
+
+        r_time = time() - t
+
+        print(f'Время выполнения для def ... yield:  {y_time:.5}')
+        print(f'Время выполнения для def ... return: {r_time:.5}')
+
     except TypeError:
         continue
     except ValueError:
