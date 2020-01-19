@@ -45,6 +45,7 @@ while 1:
             print(f'{i}! = {f}')
 
         y_time = time() - t
+        print()
         t = time()
 
         for i, f in enumerate(range(1, n + 1), 1):
@@ -52,7 +53,7 @@ while 1:
 
         r_time = time() - t
 
-        print(f'Время выполнения для def ... yield:  {y_time:.5}')
+        print(f'\nВремя выполнения для def ... yield:  {y_time:.5}')
         print(f'Время выполнения для def ... return: {r_time:.5}')
 
     except TypeError:
