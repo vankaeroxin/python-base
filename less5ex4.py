@@ -9,7 +9,6 @@ w.close()
 w = open('ex41.txt', 'a')
 with open('ex4.txt') as f:
     f_list = f.readlines()
-    r_list = []
     for ind, el in enumerate(f_list):
         text = el.split()[0]
         r = requests.post(url, data={'key': key, 'text': text, 'lang': lang})
