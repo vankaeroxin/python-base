@@ -13,7 +13,7 @@ with open('ex4.txt') as f:
         text = el.split()[0]
         r = requests.post(url, data={'key': key, 'text': text, 'lang': lang})
         print(f'[{"#"*ind}', end=f'{"." * (len(f_list) - 1 - ind)}]\n')
-        s = ''.join(r.json().get('text')) + ' ' + ' '.join(el.split()[1:])
-        w.write(f'{s}\n')
+        s = ''.join(r.json().get('text')) + ' ' + ' '.join(el.split()[1:]) + '\n'
+        w.write(s)
 
 w.close()
