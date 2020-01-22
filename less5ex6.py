@@ -1,4 +1,4 @@
-with open('ex6.txt') as f:
+with open('ex6.txt', encoding='utf-8') as f:
     f_list = f.readlines()
     d = {}
     for el in f_list:

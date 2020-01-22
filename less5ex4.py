@@ -6,7 +6,7 @@ lang = 'en-ru'
 
 w = open('ex41.txt', 'w')
 w.close()
-w = open('ex41.txt', 'a')
+w = open('ex41.txt', 'a', encoding='utf-8')
 with open('ex4.txt') as f:
     f_list = f.readlines()
     for ind, el in enumerate(f_list):

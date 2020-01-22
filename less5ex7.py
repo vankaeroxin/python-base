@@ -1,6 +1,6 @@
 import json
 
-with open('ex7.txt') as f:
+with open('ex7.txt', encoding='utf-8') as f:
     f_list = f.readlines()
     profit_dict, cnt, profit_sum = {}, 0, 0
 
@@ -15,5 +15,5 @@ with open('ex7.txt') as f:
 firm_list = [profit_dict, {'average_profit': profit_sum/cnt}]
 print(firm_list)
 
-with open("ex7.json", "w") as write_f:
+with open("ex7.json", "w", encoding='utf-8') as write_f:
     json.dump(firm_list, write_f, sort_keys=True, indent=4)
