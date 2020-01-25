@@ -4,6 +4,9 @@ class Worker:
     position = 'Должность'
     _income = {'Wage': 0, 'Bonus': 0}
 
+    def set_income(self, wage, bonus):
+        self._income = {'Wage': wage, 'Bonus': bonus}
+
     # def __init__(self, name, surname, position, wage, bonus):
     #     self.name = name
     #     self.surname = surname
@@ -13,12 +16,15 @@ class Worker:
 
 class Position(Worker):
     def get_full_name(self):
-        print(super().name)
-        print(super().surname)
+        print(f'{self.name} {self.surname}')
+
+    def get_total_income(self):
+        print(f'Общий доход: {sum(self._income.values())}')
 
 
 p = Position()
-p.name = 'qweqwe'
-p.surname = 'ee'
+p.name = 'Алексей'
+p.surname = 'Стаханов'
 p.get_full_name()
-
+p.set_income(200, 100)
+p.get_total_income()
